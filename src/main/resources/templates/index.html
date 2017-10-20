@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<title>Titulo</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1 class="display-3">Bienvenido a nuestro restaurante</h1>
+		<p class="lead">Para pedir nuestros platos, puede usar nuestros botones</p>
+		<hr class="my-4"/>
+		<p>También puede visitar <a href="/pedir">nuestra carta</a></p>
+	</div>
+  
+	<div class="text-center">
+		<div id="acciones" class="btn-group">
+			<a class="btn btn-secondary" href="/pedir/hamburguesa">Pedir una hamburguesa</a>
+			<a class="btn btn-secondary" href="/pedir/hamburguesa/15">Pedir 5 hamburguesas</a>
+			<a class="btn btn-secondary" href="/pedir/hotdog">Pedir un hotdog</a>
+			<a class="btn btn-secondary" href="/pedir/hotdog/10">Pedimos 10 hotdog</a>
+			<a class="btn btn-secondary" href="/pedir/combo">Pedimos un combo (5 de cada)</a>
+			<a class="btn btn-secondary" href="/pedir/menu/1">Pedimos un menú 1(1 burger,1 hotdog, 2 chips, 2 drinks)</a>
+		</div>
+	</div>	
+	
+	<br/>
+	<br/>
+	<hr/>
+	
+	<div id="resultado" class="alert alert-success" data-th-if="${resultado != null}">
+		<span data-th-text="${resultado}"></span>
+	</div>
+	
+	<div id="resultado" class="alert alert-success" data-th-if="${resultado != null}">
+		<span data-th-text="${resultado}"></span>
+		<p class="" data-th-text="${precio + ' €'}"></p>
+	</div>
+	
+	
+</body>
+</html>
